@@ -8,8 +8,6 @@ import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
 import RuleOutlinedIcon from '@mui/icons-material/RuleOutlined';
 import { Link} from 'react-scroll'
 
-var Scroll = require('react-scroll');
-
 export default function Home(){
 
     const legalContract = [

@@ -12,8 +12,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import PropTypes from 'prop-types';
 import { Link} from 'react-scroll'
 
-var Scroll = require('react-scroll');
-
 function HideOnScroll(props) {
 const { children, window } = props;
 // Note that you normally won't need to set the window ref as useScrollTrigger
