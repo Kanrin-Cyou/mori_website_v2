@@ -115,24 +115,23 @@ export default function Home(){
                                 >
                                 当事務所は入管業務に関する知識と長年の経験に基づき、顧問先の皆様の入管に関する疑問点に、適時に最適な解決案を提案いたします。
                                 </Typography>
-
-                                <Button 
-                                    color="secondary" 
-                                    variant="contained"
-                                    textSizeMedium
-                                    sx = {{mt:5, pt:2,pb:2,pl:3,pr:3,color:'black',borderRadius:50}}
-                                    xs = {{color:'black'}}
-                                >
-                                    <Link duration={1000} smooth={true} to='questionary' >
-                                        <Typography
-                                        variant="h6"
-                                        fontWeight='bold'
-                                        >
-                                            お問い合わせ
-                                        </Typography>
-                                    </Link>
-                                    
-                                </Button>
+                                <Link duration={1000} smooth={true} to='questionary' >
+                                    <Button 
+                                        color="secondary" 
+                                        variant="contained"
+                                        textSizeMedium
+                                        sx = {{mt:5, pt:2,pb:2,pl:3,pr:3,color:'black',borderRadius:50}}
+                                    >
+                                        
+                                            <Typography
+                                            variant="h6"
+                                            fontWeight='bold'
+                                            color="black"
+                                            >
+                                                お問い合わせ
+                                            </Typography>
+                                    </Button>
+                                </Link>
                             </Box>
 
                         </Grid>

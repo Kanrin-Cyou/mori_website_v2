@@ -95,24 +95,42 @@ export default function ResponsiveAppBar(){
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            <MenuItem key={'トップ'}>
-                                <Link duration={1000} smooth={true} to='top' onClick={()=>handleCloseNavMenu()}>トップ</Link>
-                            </MenuItem>
-                            <MenuItem key={'ご挨拶'}>
-                                <Link duration={1000} smooth={true} to='welcome'onClick={()=>handleCloseNavMenu()}>ご挨拶</Link>
-                            </MenuItem>
-                            <MenuItem key={'業務内容'}>
-                                <Link duration={1000} smooth={true} to='business' onClick={()=>handleCloseNavMenu()}>業務内容</Link>
-                            </MenuItem>
-                            <MenuItem key={'行政書士紹介'}>
-                                <Link duration={1000} smooth={true} to='introduction'onClick={()=>handleCloseNavMenu()}>行政書士紹介</Link>
-                            </MenuItem>
-                            <MenuItem key={'アクセス'} >
-                                <Link duration={1000} smooth={true} to='access' onClick={()=>handleCloseNavMenu()}>アクセス</Link>
-                            </MenuItem>
-                            <MenuItem key={'お問い合わせ'}>
-                                <Link duration={1000} smooth={true} to='questionary'onClick={()=>handleCloseNavMenu()}>お問い合わせ</Link>
-                            </MenuItem>
+                            <Link duration={1000} smooth={true} to='top'>
+                                <MenuItem key={'トップ'} onClick={()=>handleCloseNavMenu()}>
+                                    トップ
+                                </MenuItem>
+                            </Link>
+                            
+                            <Link duration={1000} smooth={true} to='welcome'>
+                                <MenuItem key={'ご挨拶'} onClick={()=>handleCloseNavMenu()}>
+                                    ご挨拶
+                                </MenuItem>
+                            </Link>
+                            
+                            <Link duration={1000} smooth={true} to='business' >
+                                <MenuItem key={'業務内容'} onClick={()=>handleCloseNavMenu()}>
+                                    業務内容
+                                </MenuItem>
+                            </Link>
+
+                            <Link duration={1000} smooth={true} to='introduction'>
+                                <MenuItem key={'行政書士紹介'} onClick={()=>handleCloseNavMenu()}>
+                                    行政書士紹介
+                                </MenuItem>
+                            </Link>
+
+                            <Link duration={1000} smooth={true} to='access' >
+                                <MenuItem key={'アクセス'} onClick={()=>handleCloseNavMenu()}>
+                                    アクセス
+                                </MenuItem>
+                            </Link>
+
+                            <Link duration={1000} smooth={true} to='questionary'>
+                                <MenuItem key={'お問い合わせ'} onClick={()=>handleCloseNavMenu()}>
+                                    お問い合わせ
+                                </MenuItem>
+                            </Link>
+
                         </Menu>
                     </Box>    
                     
@@ -127,47 +145,60 @@ export default function ResponsiveAppBar(){
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Button
-                            key={'トップ'}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            <Link duration={1000} smooth={true} to='top'>トップ</Link>
-                        </Button>
+                        <Link duration={1000} smooth={true} to='top' sx={{width:"100%",height:"100%"}}>
+                            <Button
+                                key={'トップ'}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                トップ
+                            </Button>
+                        </Link>
+                        
+                        <Link duration={1000} smooth={true} to='welcome'>
+                            <Button
+                                key={'ご挨拶'}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                ご挨拶
+                            </Button>
+                        </Link>
 
-                        <Button
-                            key={'ご挨拶'}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            <Link duration={1000} smooth={true} to='welcome'>ご挨拶</Link>
-                        </Button>
-                        <Button
-                            key={'業務内容'}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            <Link duration={1000} smooth={true} to='business'>業務内容</Link>
-                        </Button>
-                        <Button
-                            key={'行政書士紹介'}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            <Link duration={1000} smooth={true} to='introduction' >行政書士紹介</Link>
-                        </Button>
-                        <Button
-                            key={'アクセス'}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            <Link duration={1000} smooth={true} to='access' >アクセス</Link>
-                        </Button>
+                        <Link duration={1000} smooth={true} to='business'>
+                            <Button
+                                key={'業務内容'}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                業務内容
+                            </Button>
+                        </Link>
+
+                        <Link duration={1000} smooth={true} to='introduction' >
+                            <Button
+                                key={'行政書士紹介'}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                            行政書士紹介
+                            </Button>
+                        </Link>
+                        <Link duration={1000} smooth={true} to='access' >
+                            <Button
+                                key={'アクセス'}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                アクセス
+                            </Button>
+                        </Link>
                     </Box>
-                    
-                    <Button 
-                        color="secondary" 
-                        variant="contained"
-                        sx = {{color: 'black', display: {xs: 'none', md: 'block',borderRadius:50 }}}
-                        pr={10}
-                    >
-                        <Link duration={1000} smooth={true} to='questionary' >お問い合わせ</Link>
-                    </Button>
+                    <Link duration={1000} smooth={true} to='questionary' >
+                        <Button 
+                            color="secondary" 
+                            variant="contained"
+                            sx = {{color: 'black', display: {xs: 'none', md: 'block',borderRadius:50 }}}
+                            pr={10}
+                        >
+                            お問い合わせ
+                        </Button>
+                    </Link>
 
                 </Toolbar>
             </Container>
