@@ -43,7 +43,7 @@ export default function Home(){
         },
         {
             title:'取得に際しての留意事項',
-            note:'リサイクルショ「高度人材ポイント」は正確にカウントする必要があり、一見高度人材ポイント基準をクリアしているように見える場合でも実際には要件を充足しない場合があります。また、高度人材ポイントの付与基準は政策によって随時改定がなされているため、常に最新の基準でのポイント計算をすることが重要となります。ップやネットオークションで中古品売買の商売をしている人は、許可が必要となります。',
+            note:'「高度人材ポイント」は正確にカウントする必要があり、一見高度人材ポイント基準をクリアしているように見える場合でも実際には要件を充足しない場合があります。また、高度人材ポイントの付与基準は政策によって随時改定がなされているため、常に最新の基準でのポイント計算をすることが重要となります。',
         },
     ]
 
@@ -131,7 +131,12 @@ export default function Home(){
                                     sx = {{mt:5, pt:2,pb:2,pl:3,pr:3,color:'black'}}
                                     xs = {{color:'black'}}
                                 >
+                                    <Typography
+                                    variant="h6"
+                                    fontWeight='bold'
+                                    >
                                     お問い合わせ
+                                    </Typography>
                                 </Button>
                             </Box>
 
@@ -213,7 +218,7 @@ export default function Home(){
                     }}
                     id="introduction"
             >
-                <Container sx={{pt:8, pb:8}}>
+                <Container sx={{pt:8}}>
 
                     <Grid container spacing={2}>
 
@@ -228,7 +233,7 @@ export default function Home(){
                                 行政書士紹介
                             </Typography>
 
-                            <Typography sx={{pt:5,pb:2}} align="left" variant="h4"
+                            <Typography sx={{pt:8,pb:2}} align="left" variant="h4"
                                 data-aos="fade-left"
                                 data-aos-duration="1000"
                             >
