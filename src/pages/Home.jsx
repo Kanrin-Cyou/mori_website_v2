@@ -189,7 +189,10 @@ export default function Home(){
 
                     <Grid container spacing={2} pb={5}>
                         <Grid item sx={7}>
-                            <Typography sx={{color:"primary.main"}} align="left" variant="h3">
+                            <Typography sx={{color:"primary.main"}} align="left" variant="h3"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            >
                                 業務内容
                             </Typography>
                         </Grid>
@@ -217,27 +220,18 @@ export default function Home(){
                     <Grid container spacing={2}>
 
                         <Grid item xs={12} md={6}
-                            data-aos="fade-right"
-                            data-aos-duration="1000"
-                        >
-                            <Typography sx={{pb:2, color:"primary.main"}} align="left" variant="h3"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                            >
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        >          
+                            <Typography sx={{pb:2, color:"primary.main"}} align="left" variant="h3">
                                 行政書士紹介
                             </Typography>
 
-                            <Typography sx={{pt:8,pb:2}} align="left" variant="h4"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                            >
+                            <Typography sx={{pt:8,pb:2}} align="left" variant="h4">
                                 行政書士　森下　洋
                             </Typography>
 
-                            <Typography align="left" sx={{pb:8}} variant="h5"
-                            data-aos="fade-right"
-                            data-aos-duration="1000"
-                            >
+                            <Typography align="left" sx={{pb:8}} variant="h5">
                                 <br/>
                                 ■ 1975年生
                                 <br/>
@@ -254,12 +248,8 @@ export default function Home(){
                         <Grid item xs={12} md={6}
                         data-aos="fade-left"
                         data-aos-duration="1000"
-                        >
-                            
-                            <img style={{height:"auto",maxWidth:"100%"}} src={WorkImage} alt='workplace' 
-                            data-aos="fade-up"
-                            data-aos-duration="1000"/>
-                            
+                        >          
+                            <img style={{height:"auto",maxWidth:"100%"}} src={WorkImage} alt='workplace' />
                         </Grid>
                     </Grid>
                 </Container>
