@@ -107,18 +107,18 @@ export default function Home(){
                                 component="div"
                                 sx={{color:"white",pt:5, flexGrow: 1 }}
                             >
-                                新宿の行政書士
+                                入管業務に
                                 <br/>
-                                行政書士M&K総合事務所へ
+                                豊富な経験と実績を持つ
                                 <br/>
-                                ようこそ
+                                行政書士事務所
                             </Typography>
                             <Typography
                                 variant="h6"
                                 component="div"
                                 sx={{color:"white",pt:5,pr:3,flexGrow: 1 }}
                             >
-                                電子定款作成及び認証代理・各種許認可・会社関係書類作成・入国管理局関係書類作成・サイト売買契約書作成等に専門性を有し、お客様の実情に合わせた柔軟な対応を第一に活動しております。
+                                当事務所は入管業務に関する知識と長年の経験に基づき、顧問先の皆様の入管に関する疑問点に、適時に最適な解決案を提案いたします。
                             </Typography>
 
                             <Button 
@@ -132,7 +132,7 @@ export default function Home(){
                                 お問い合わせ
                             </Button>
 
-                            <Typography
+                            {/* <Typography
                                 variant="h6"
                                 noWrap
                                 component="div"
@@ -141,7 +141,7 @@ export default function Home(){
                                 Our Acieved Awards
                                 <br/>
                                 succession, and all other important transitions.
-                            </Typography>
+                            </Typography> */}
                         </Grid>
 
                         <Grid display={{xs:'none',md:'block'}} item xs={0} md={5} pt={15} mt={5}
