@@ -113,19 +113,19 @@ export default function ResponsiveAppBar(){
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            <MenuItem key={'Home'} onClick={()=> handleCloseNavMenu('/mori_website/')}>
+                            <MenuItem key={'Home'} onClick={()=> handleCloseNavMenu('/mori_website_v2/')}>
                                 <Typography textAlign="center">{'Home'}</Typography>
                             </MenuItem>
-                            <MenuItem key={'事務所案内'} onClick={()=> handleCloseNavMenu('/mori_website/profile')}>
+                            <MenuItem key={'事務所案内'} onClick={()=> handleCloseNavMenu('/mori_website_v2/profile')}>
                                 <Typography textAlign="center">{'事務所案内'}</Typography>
                             </MenuItem>
-                            <MenuItem key={'主な取払分野'} onClick={()=> handleCloseNavMenu('/mori_website/service')}>
+                            <MenuItem key={'主な取払分野'} onClick={()=> handleCloseNavMenu('/mori_website_v2/service')}>
                                 <Typography textAlign="center">{'主な取払分野'}</Typography>
                             </MenuItem>
                             <MenuItem key={'アクセス'} onClick={()=>handleCloseNavMenus2()}>
                                 <Typography textAlign="center">{'アクセス'}</Typography>
                             </MenuItem>
-                            <MenuItem key={'お問い合わせ'} onClick={()=>handleCloseNavMenu('/mori_website/contact')}>
+                            <MenuItem key={'お問い合わせ'} onClick={()=>handleCloseNavMenu('/mori_website_v2/contact')}>
                                 <Typography textAlign="center">{'お問い合わせ'}</Typography>
                             </MenuItem>
                         </Menu>
@@ -144,21 +144,21 @@ export default function ResponsiveAppBar(){
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Button
                             key={'Home'}
-                            onClick={()=> handleNav('/mori_website/')}
+                            onClick={()=> handleNav('/mori_website_v2/')}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                         >
                             Home
                         </Button>
                         <Button
                             key={'事務所案内'}
-                            onClick={()=> handleNav('/mori_website/profile')}
+                            onClick={()=> handleNav('/mori_website_v2/profile')}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                         >
                             事務所案内
                         </Button>
                         <Button
                             key={'主な取払分野'}
-                            onClick={()=> handleNav('/mori_website/service')}
+                            onClick={()=> handleNav('/mori_website_v2/service')}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                         >
                             主な取扱分野
@@ -175,7 +175,7 @@ export default function ResponsiveAppBar(){
                     <Button 
                         color="secondary" 
                         variant="contained"
-                        onClick={()=> navigate('/mori_website/contact')}
+                        onClick={()=> navigate('/mori_website_v2/contact')}
                         sx = {{color: 'black', display: {xs: 'none', md: 'block' }}}
                         pr={10}
                     >

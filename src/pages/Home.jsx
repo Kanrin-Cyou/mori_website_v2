@@ -125,7 +125,7 @@ export default function Home(){
                                 color="secondary" 
                                 variant="contained"
                                 textSizeMedium
-                                onClick={()=> handleNav('/mori_website/contact')}
+                                onClick={()=> handleNav('/mori_website_v2/contact')}
                                 sx = {{mt:5, pt:2,pb:2,pl:3,pr:3,color:'black'}}
                                 xs = {{color:'black'}}
                             >

@@ -49,10 +49,10 @@ class App extends Component {
         <Router>
           <Layout>
             <Routes>
-              <Route path="/mori_website/" element={<Home/>}/>
-              <Route path="/mori_website/profile" element={<Profile/>}/>
-              <Route path="/mori_website/service" element={<Service/>}/>
-              <Route path="/mori_website/contact" element={<Contact/>}/>
+              <Route path="/mori_website_v2/" element={<Home/>}/>
+              <Route path="/mori_website_v2/profile" element={<Profile/>}/>
+              <Route path="/mori_website_v2/service" element={<Service/>}/>
+              <Route path="/mori_website_v2/contact" element={<Contact/>}/>
             </Routes>
           </Layout>
         </Router>
