@@ -41,13 +41,17 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App">
+      <Box sx={{ 
+        padding:0,
+        margin:0,
+        overflow: "hidden"}}
+      >
         <ThemeProvider theme={theme}>
             <ResponsiveAppBar/>
             <Home/>
             <Footer/>
         </ThemeProvider>
-      </div>
+      </Box>
     );
   }
 }
