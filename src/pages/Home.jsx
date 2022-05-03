@@ -6,16 +6,11 @@ import LearningCard from '../components/LearningCard'
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
 import RuleOutlinedIcon from '@mui/icons-material/RuleOutlined';
+import { Link} from 'react-scroll'
 
 var Scroll = require('react-scroll');
 
 export default function Home(){
-
-    var scroll = Scroll.animateScroll; 
-    const handleNav = (address) => {
-        scroll.scrollToTop();
-    };
-
 
     const legalContract = [
         {
@@ -28,7 +23,7 @@ export default function Home(){
         },
         {
             title:'料金例',
-            note:'■ 顧問企業社員雇用管理関連が中心の場合…月額22,000円(税込) \r ■ 顧問企業営業案件の後方支援等を含む場合…月額33,000円(税込）',
+            note:'■ 顧問企業社員雇用管理関連が中心の場合…月額22,000円(税込) ■ 顧問企業営業案件の後方支援等を含む場合…月額33,000円(税込）',
         },
     ]
 
@@ -127,16 +122,18 @@ export default function Home(){
                                     color="secondary" 
                                     variant="contained"
                                     textSizeMedium
-                                    onClick={()=> handleNav('/mori_website_v2/contact')}
-                                    sx = {{mt:5, pt:2,pb:2,pl:3,pr:3,color:'black'}}
+                                    sx = {{mt:5, pt:2,pb:2,pl:3,pr:3,color:'black',borderRadius:50}}
                                     xs = {{color:'black'}}
                                 >
-                                    <Typography
-                                    variant="h6"
-                                    fontWeight='bold'
-                                    >
-                                    お問い合わせ
-                                    </Typography>
+                                    <Link duration={1000} smooth={true} to='questionary' >
+                                        <Typography
+                                        variant="h6"
+                                        fontWeight='bold'
+                                        >
+                                            お問い合わせ
+                                        </Typography>
+                                    </Link>
+                                    
                                 </Button>
                             </Box>
 

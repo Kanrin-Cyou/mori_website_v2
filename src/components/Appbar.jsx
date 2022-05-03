@@ -10,7 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import {AppBar,Toolbar,Slide} from '@mui/material';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import PropTypes from 'prop-types';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link} from 'react-scroll'
 
 var Scroll = require('react-scroll');
 
@@ -41,8 +41,6 @@ export default function ResponsiveAppBar(){
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  var scroll = Scroll.animateScroll;
 
   HideOnScroll.propTypes = {
     children: PropTypes.element.isRequired,
@@ -167,7 +165,7 @@ export default function ResponsiveAppBar(){
                     <Button 
                         color="secondary" 
                         variant="contained"
-                        sx = {{color: 'black', display: {xs: 'none', md: 'block' }}}
+                        sx = {{color: 'black', display: {xs: 'none', md: 'block',borderRadius:50 }}}
                         pr={10}
                     >
                         <Link duration={1000} smooth={true} to='questionary' >お問い合わせ</Link>
