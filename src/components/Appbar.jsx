@@ -141,7 +141,7 @@ export default function ResponsiveAppBar(){
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        行政書士 M&K総合事務所
+                        行政書士M&K総合事務所
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
