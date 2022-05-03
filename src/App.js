@@ -1,17 +1,13 @@
 import React, { Component }from 'react';
-
+import {Box} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
 import { teal } from '@mui/material/colors';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 
 import Home from './pages/Home';
-import Profile from './pages/Profile';
-import Service from './pages/Service';
-import Contact from './pages/Contact';
-import Layout from './components/Layout';
-
+import ResponsiveAppBar from './components/Appbar';
+import Footer from './components/Footer';
 
 const theme = createTheme({
   palette: {
@@ -45,19 +41,13 @@ class App extends Component {
 
   render(){
     return (
-      <ThemeProvider theme={theme}>
-        <Router>
-          <Layout>
-            <Routes>
-              <Route path="/mori_website_v2/" element={<Home/>}/>
-              <Route path="/mori_website_v2/profile" element={<Profile/>}/>
-              <Route path="/mori_website_v2/service" element={<Service/>}/>
-              <Route path="/mori_website_v2/contact" element={<Contact/>}/>
-            </Routes>
-          </Layout>
-        </Router>
-      </ThemeProvider>
-
+      <div className="App">
+        <ThemeProvider theme={theme}>
+            <ResponsiveAppBar/>
+            <Home/>
+            <Footer/>
+        </ThemeProvider>
+      </div>
     );
   }
 }

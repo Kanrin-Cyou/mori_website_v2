@@ -1,7 +1,32 @@
 import React from 'react';
-import { Card,CardHeader, CardContent,CardActions,Button, Typography} from '@mui/material';
+import {Box,Button, Typography} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function learningCard({items,nav}){
+const ExpandMore = styled((props) => {
+    const { expand, ...other } = props;
+    return <IconButton {...other} />;
+  })(({ theme, expand }) => ({
+    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  }));
+
+export default function LearningCard({items}){
+
+    const [expanded, setExpanded] = React.useState(false);
+
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
 
     return(
         <Card 
@@ -13,22 +38,39 @@ export default function learningCard({items,nav}){
             <CardContent>
                 <CardHeader 
                     avatar={items.icon}
+                    title={items.title}
+                    titleTypographyProps={{color:"primary.main",variant:"h5", fontWeight:'bold',pt:2}}
                 />
-                <Typography variant='h5' fontWeight='bold' pb={2}>
-                    {items.title}
-                </Typography>
-                <Typography variant='body2' >
+                <Typography variant='h6' sx={{pl:2}}>
                     {items.content}
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button 
-                    sx = {{mb:3}}
-                    onClick={()=> nav('/mori_website/service')}
+
+            <Box textAlign='center' sx={{pt:2,pb:2}}>
+                <ExpandMore
+                expand={expanded}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="詳細"
                 >
-                    詳細
-                </Button>
-            </CardActions>
+                    <ExpandMoreIcon color="primary.main"/>
+                </ExpandMore>
+            </Box>
+
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+                        {items.detail.map(item2 => (
+                            <Box>
+                                <Typography align="left" sx={{pt:2,pr:2, color:"primary.main"}} fontWeight='bold' variant="h5">
+                                    {item2.title}
+                                </Typography>
+                                <Typography align="left" sx={{pt:2,pr:2,pb:5, color:"text.secondary"}} variant="h6">
+                                    {item2.note}
+                                </Typography>
+                            </Box>
+                        ))}
+                </CardContent>
+            </Collapse>
         </Card>
     )
 }

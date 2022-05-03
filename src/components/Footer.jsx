@@ -9,6 +9,7 @@ return(
         width: '100vw',
         backgroundColor: 'primary.main',
     }}
+    id="access"
     >
         <Container sx={{pt:5, pb:5}}>
             <Grid container>
