@@ -1,10 +1,9 @@
 import React from 'react';
-import {Box,Button, Typography} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -66,6 +65,8 @@ export default function LearningCard({items}){
                                 </Typography>
                                 <Typography align="left" sx={{pt:2,pr:2,pb:5, color:"text.secondary"}} variant="h6">
                                     {item2.note}
+                                    <br/>
+                                    {item2.note2}
                                 </Typography>
                             </Box>
                         ))}
